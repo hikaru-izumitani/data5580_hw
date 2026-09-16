@@ -10,15 +10,9 @@ db = SQLAlchemy(model_class=BaseModel)
 
 
 def init_db(app) -> None:
-    import data5580_hw.services.database.user_sql
+    import data5580_hw.services.database.user_sql  # noqa: F401
 
     db.init_app(app)
 
     with app.app_context():
-        try:
-            db.drop_all()
-        except:
-            pass
-        finally:
-            db.create_all()
-            db.session.commit()
+        db.create_all()

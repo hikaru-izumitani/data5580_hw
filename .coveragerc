@@ -1,3 +1,12 @@
 [run]
+source = data5580_hw
 relative_files = True
-source = .
+branch = True
+omit =
+    data5580_hw/tests/*
+    data5580_hw/notebooks/*
+
+[report]
+omit =
+    data5580_hw/tests/*
+    data5580_hw/notebooks/*
