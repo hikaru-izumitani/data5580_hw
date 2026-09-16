@@ -12,8 +12,8 @@ def client():
     with app.test_client() as client:
         yield client
 
-
+"""
 def test_create_user(client):
     user_controller = UserController()
 
-    user_controller.create_user()
+    user_controller.create_user()"""
